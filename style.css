@@ -31,23 +31,6 @@ body {
   position: relative;
   border-radius: 1rem;
 }
-#question-container h2#question {
-  margin-bottom: 1.6rem;
-}
-#question-container li {
-  list-style: none;
-  margin: 0.2rem;
-  font-weight: 400;
-}
-#question-container li input {
-  cursor: pointer;
-}
-#question-container #submit-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 3rem 5rem;
-}
 .btn {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -65,6 +48,25 @@ body {
 .btn:focus {
   background-color: hsl(219, 70%, 40%);
 }
+#question-container {
+  display: flex;
+  flex-direction: column;
+}
+#question-container h2#question {
+  margin-bottom: 1.6rem;
+}
+#question-container li {
+  list-style: none;
+  margin: 0.2rem;
+  font-weight: 400;
+}
+#question-container li input {
+  cursor: pointer;
+}
+#question-container #submit-btn {
+  margin-top: 1.6rem;
+  align-self: flex-end;
+}
 #result-container #try-again-btn {
   margin-top: 1.6rem;
 }
@@ -75,7 +77,7 @@ body {
   color: rgb(255, 0, 0);
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width: 868px) {
@@ -85,7 +87,14 @@ body {
 }
 
 @media screen and (max-width: 468px) {
+  .container {
+    font-size: 1.6rem;
+  }
   .center-box {
     width: 100%;
+  }
+  #question-container #submit-btn {
+    margin-top: 1.6rem;
+    align-self: initial;
   }
 }
