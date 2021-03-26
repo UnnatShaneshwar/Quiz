@@ -52,12 +52,14 @@ const loadQues = () => {
   optLabel2.innerHTML = quesList.opt2;
   optLabel3.innerHTML = quesList.opt3;
   optLabel4.innerHTML = quesList.opt4;
+
 };
 const getCheckedAnswer = () => {
   let chkAns;
   answers.forEach((ans) => {
     if (ans.checked) {
       chkAns = ans.id;
+      ans.checked = false;
     }
   });
   return chkAns;
